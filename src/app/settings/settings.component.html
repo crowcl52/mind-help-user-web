@@ -1,12 +1,12 @@
 <section class="container">
     <div class="row mt-4 s-box">
         <div class="col-xl-3 col-12 p-2 row border info-container">
-            <div class="rounded-circle avatar">
-                <img width="100%"
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRlWkkJDRgqwZriGSI4R0ntWMI9Scm31zIQGYJo5ZpeDHSC4MW3"
+            <div class="">
+                <img width="200px"
+                    [src]="img"
                     alt="avatar">
             </div>
-            <h5 class="name-text mt-2 text-center"> Martin Eduardo Sanchez Rubio </h5>
+            <h5 class="name-text mt-2 text-center"> {{name}} </h5>
             <div class="col-12">
                 <div class="tab p-2 cursor" routerLinkActive="active-link">
                     <a (click)="changeTitle('Editar Perfil')" class="tab-text text-center txt-main m-0" [routerLink]="['/panel/settings/edit-profile']"> Editar Perfil </a>

@@ -10,7 +10,7 @@ import { StoreModule } from '@ngrx/store';
 import { appReducer } from './app.reducer';
 
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
-import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+import { NgxOneSignalModule } from 'ngx-onesignal';
 
 
 // Components
@@ -37,7 +37,8 @@ import { PublisherComponent } from './bookin/video-chat/publisher/publisher.comp
 import { SubscriberComponent } from './bookin/video-chat/subscriber/subscriber.component';
 import { LandingComponent } from './landing/landing.component';
 
-const config: SocketIoConfig = { url: 'https://mindhelp.mx', options: {} };
+
+
 
 
 @NgModule({
@@ -70,12 +71,19 @@ const config: SocketIoConfig = { url: 'https://mindhelp.mx', options: {} };
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    SocketIoModule.forRoot(config),
     ScrollToModule.forRoot(),
     StoreModule.forRoot( appReducer ),
     StoreDevtoolsModule.instrument({
       maxAge: 25, // Retains last 25 states
       logOnly: environment.production, // Restrict extension to log-only mode
+    }),
+    NgxOneSignalModule.forRoot({
+      appId:"0c59affd-9198-4198-a955-54f89f59607f",
+      allowLocalhostAsSecureOrigin: true,
+      autoRegister: false,
+      notifyButton: {
+        enabled: false,
+      },
     }),
   ],
   providers: [],

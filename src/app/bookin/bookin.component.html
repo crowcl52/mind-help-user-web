@@ -74,11 +74,11 @@
                             </div>
                             <div class="container-fluid mt-3">
                                 <div class="row justify-content-between">
-                                    <button (click)="goSession()" type="button"
+                                    <button (click)="goSession(b)" type="button"
                                         class="btn bg-main text-white col-5">
                                         <mat-icon>videocam_outline</mat-icon> Video
                                     </button>
-                                    <button [disabled]="cheackDates(b.start_date)" (click)="goSession()" type="button"
+                                    <button [disabled]="cheackDates(b.start_date)" (click)="goSession(b)" type="button"
                                         class="btn bg-main text-white col-5">
                                         <mat-icon>chat_bubble_outline</mat-icon> Chat
                                     </button>

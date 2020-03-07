@@ -31,6 +31,13 @@
             </a>
         </div>
         <mat-divider></mat-divider>
+        <div class="m-2 text-center">
+            <a class="cursor" (click)="logout()">
+                <mat-icon>input</mat-icon>
+                <p> Logout </p>
+            </a>
+        </div>
+        <mat-divider></mat-divider>
     </mat-drawer>
     <mat-drawer-content>
         <!-- Navbar -->
@@ -39,7 +46,7 @@
                 <mat-icon *ngIf="!openMenu">menu</mat-icon>
                 <mat-icon *ngIf="openMenu">menu_open</mat-icon>
             </button>
-            <h3 > {{titleNav}} </h3>
+            <h3> {{titleNav}} </h3>
         </mat-toolbar>
         <!-- Aplication -->
         <section class="content-app">

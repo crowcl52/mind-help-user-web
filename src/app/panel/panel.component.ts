@@ -29,4 +29,8 @@ export class PanelComponent implements OnInit, OnDestroy {
     this.titleNavSubscription.unsubscribe();
   }
 
+  logout(){
+    location.reload();
+  }
+
 }

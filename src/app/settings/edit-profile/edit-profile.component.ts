@@ -120,8 +120,6 @@ export class EditProfileComponent implements OnInit, OnDestroy {
 
     console.log(user)
 
-    let encryptUSer = { data: this.service.encrypt(user, "private") }
-
     this.service.editProfile(user).subscribe(data => {
       console.log(data)
     })
